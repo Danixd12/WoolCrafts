@@ -5,6 +5,7 @@ import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.RecipeChoice;
 import org.bukkit.inventory.ShapedRecipe;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.jetbrains.annotations.NotNull;
@@ -75,7 +76,7 @@ public class Craft {
      * @param shape
      * @return
      */
-    public ShapedRecipe createRecipe(ShapedRecipe recipe, Object[][] ingredient, String shape) {
+    public ShapedRecipe createRecipe(ShapedRecipe recipe, Object[][] ingredient, String... shape) {
 
         recipe.shape(shape);
 
@@ -104,7 +105,7 @@ public class Craft {
             if (ingredients.getValueAt(rowIndex, 1) instanceof ItemStack) {
                 ItemStack index = (ItemStack) ingredients.getValueAt(rowIndex, 1);
 
-                recipe.setIngredient(key, Objects.requireNonNull(index.getData()));
+                recipe.setIngredient(key, new RecipeChoice.ExactChoice(index));
             } else {
                 Material index = (Material) ingredients.getValueAt(rowIndex, 1);
 

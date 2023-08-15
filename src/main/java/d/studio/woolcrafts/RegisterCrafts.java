@@ -23,8 +23,8 @@ public class RegisterCrafts {
     public void registerCraft() {
 
         // 1 ITEM
-        ItemStack item = api.createItem("testItem",
-                Material.ENDER_CHEST, 1,
+        ItemStack item = api.createItem(
+                "testItem", Material.ENDER_CHEST, 1,
                 Arrays.asList("asd"),
                 new Object[][]{new Object[]
                         {Enchantment.ARROW_INFINITE, 5},
