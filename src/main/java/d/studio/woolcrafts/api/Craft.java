@@ -3,7 +3,6 @@ package d.studio.woolcrafts.api;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
-import org.bukkit.NamespacedKey;
 import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.ShapedRecipe;
@@ -11,9 +10,8 @@ import org.bukkit.inventory.meta.ItemMeta;
 import org.jetbrains.annotations.NotNull;
 
 import javax.swing.table.AbstractTableModel;
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
+import java.util.Objects;
 
 
 public class Craft {
@@ -77,7 +75,7 @@ public class Craft {
      * @param shape
      * @return
      */
-    public ShapedRecipe createRecipe(ShapedRecipe recipe, @NotNull Object[][] ingredient, String... shape) {
+    public ShapedRecipe createRecipe(ShapedRecipe recipe, Object[][] ingredient, String shape) {
 
         recipe.shape(shape);
 
@@ -102,9 +100,17 @@ public class Craft {
 
         for (int rowIndex = 0; rowIndex < ingredient.length; rowIndex++) {
             Character key = (Character) ingredients.getValueAt(rowIndex, 0);
-            Material index = (Material) ingredients.getValueAt(rowIndex, 1);
 
-            recipe.setIngredient(key, index);
+            if (ingredients.getValueAt(rowIndex, 1) instanceof ItemStack) {
+                ItemStack index = (ItemStack) ingredients.getValueAt(rowIndex, 1);
+
+                recipe.setIngredient(key, Objects.requireNonNull(index.getData()));
+            } else {
+                Material index = (Material) ingredients.getValueAt(rowIndex, 1);
+
+                recipe.setIngredient(key,index);
+            }
+
         }
 
         Bukkit.addRecipe(recipe);

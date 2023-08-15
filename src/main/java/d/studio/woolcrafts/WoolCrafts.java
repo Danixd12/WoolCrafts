@@ -13,6 +13,7 @@ public final class WoolCrafts extends JavaPlugin {
 
         Bukkit.getConsoleSender().sendMessage("[Craft API] Plugin started. \n -> Author: DaniCraftingYT.");
         registerCrafts.registerCraft();
+
     }
 
     @Override
