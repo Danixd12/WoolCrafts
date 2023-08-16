@@ -1,15 +1,31 @@
-# WoolCrafts - Crea tus crafteos personalizados de forma facil!
+# WoolCrafts - Create your own custom crafts the easy way!
 
-*Esta api fue creada con el propósito de facilitar la creación de crafteos personalizados para tu servidor, al soportar el crafteo de items usando otros items previamente personalizados.* 
+*This api was created with the purpose of facilitating the creation of custom crafters for your server, by supporting the crafting of items using other previously customized items..* 
 
-Cualquier error al usar esta API, debe ser reportado al creador, dani33y, en su discord.
+Any errors when using this API should be reported to the creator, dani33y, in his discord.
 
-# Guía
+# How to use
 
-Primero lo instalaremos incluyendolo en nuestro proyecto.
+First we will install it by including it in our project. We can use maven or gradle.
+
+```xml
+<repositories>
+  <repository>
+	<id>jitpack.io</id>
+	<url>https://jitpack.io</url>
+  </repository>
+</repositories>
+
+<dependency>
+	<groupId>com.github.Danixd12</groupId>
+	<artifactId>WoolCrafts</artifactId>
+	<version>VERSION</version>
+</dependency>
+```
+
+Then, to create a basic item, and its subsequent recipe we can use the following
 
 ```java
-//Para crear un item basico, y su posterior receta podemos usar lo siguiente.
 
 Craft api = new Craft();
 
@@ -30,12 +46,10 @@ api.createRecipe(item,
 
 ```
 
-# Métodos
+# Methods
 
-Métodos, por ejemplo:
+`api.giveItem` Returns the item we want to give to X person.
 
-`api.giveItem` Retorna el item que deseemos dar a X persona.
+`api.createRecipe` Returns the created recipe.
 
-`api.createRecipe` Retorna la receta creada.
-
-`api.createItem` Retorna el item que hayamos creado.
+`api.createItem` Returns the item we have created.
