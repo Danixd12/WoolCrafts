@@ -21,7 +21,7 @@ public class Craft {
 
 
     /***
-     * Crea un item.
+     * Create an item.
      * @param name Name of the item.
      * @param material Material of the item.
      * @param lore Description of the item.
@@ -74,7 +74,7 @@ public class Craft {
 
 
     /***
-     * Crea la receta para un item.
+     * Create a recipe for an item.
      * @param itemToCraft The result of the craft.
      * @param ingredient Ingredients in order to craft the item.
      * @param shape Shape of the craft.
@@ -126,7 +126,7 @@ public class Craft {
     }
 
     /***
-     * Da un item a un jugador.
+     * Give an item to a player.
      * @param player Bukkit player.
      * @param item Items to give.
      */
