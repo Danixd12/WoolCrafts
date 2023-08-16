@@ -12,6 +12,8 @@ import org.bukkit.inventory.meta.ItemMeta;
 import org.jetbrains.annotations.NotNull;
 
 import javax.swing.table.AbstractTableModel;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 
@@ -33,8 +35,11 @@ public class Craft {
         ItemMeta itemMeta = item.getItemMeta();
 
         itemMeta.setDisplayName(ChatColor.translateAlternateColorCodes('&', name));
-        itemMeta.setLore(lore);
+        //itemMeta.setLore(Arrays.asList(ChatColor.translateAlternateColorCodes('&', lore.toString())));
 
+        lore.replaceAll(textToTranslate -> ChatColor.translateAlternateColorCodes('&', textToTranslate));
+
+        itemMeta.setLore(lore);
 
         AbstractTableModel enchants = new AbstractTableModel() {
 
@@ -71,14 +76,14 @@ public class Craft {
 
     /***
      * Crea la receta para un item.
-     * @param item
+     * @param itemToCraft
      * @param ingredient
      * @param shape
      * @return
      */
-    public ShapedRecipe createRecipe(ItemStack item, Object[][] ingredient, String... shape) {
+    public ShapedRecipe createRecipe(ItemStack itemToCraft, Object[][] ingredient, String... shape) {
 
-        ShapedRecipe recipe = new ShapedRecipe(item);
+        ShapedRecipe recipe = new ShapedRecipe(itemToCraft);
 
         recipe.shape(shape);
 
@@ -126,7 +131,7 @@ public class Craft {
      * @param player
      * @param item
      */
-    public void giveItem(Player player, @NotNull ItemStack item) {
+    public void giveItem(Player player, @NotNull ItemStack... item) {
 
         player.getInventory().addItem(item);
 

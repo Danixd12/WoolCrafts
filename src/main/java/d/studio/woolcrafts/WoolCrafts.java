@@ -23,3 +23,4 @@ public final class WoolCrafts extends JavaPlugin {
         Bukkit.getConsoleSender().sendMessage("[Craft API] Plugin disabled. \n -> Author: DaniCraftingYT.");
     }
 }
+

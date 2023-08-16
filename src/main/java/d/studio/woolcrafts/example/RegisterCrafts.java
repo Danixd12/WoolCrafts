@@ -25,7 +25,7 @@ public class RegisterCrafts {
         // 1 ITEM
         ItemStack item = api.createItem(
                 "testItem", Material.ENDER_CHEST, 1,
-                Arrays.asList("asd"),
+                Arrays.asList("&aasd", "&3test"),
                 new Object[][]{new Object[]
                         {Enchantment.ARROW_INFINITE, 5},
                         {Enchantment.DAMAGE_ALL, 15},
@@ -35,10 +35,9 @@ public class RegisterCrafts {
 
         api.createRecipe(item,
                  new Object[][]{new Object[]
-                         {'I', item},
                          {'X', Material.ACACIA_LOG}
                  },
-                " IX");
+                " X ");
 
         //api.giveItem("DaniCraftingYT", item);
 
