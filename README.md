@@ -1,10 +1,10 @@
-# WoolCrafts - Crea tus crafteos personalizados de forma facil!
+# WoolCrafts - Create your own custom crafts the easy way!
 
 *This api was created with the purpose of facilitating the creation of custom crafters for your server, by supporting the crafting of items using other previously customized items..* 
 
 Any errors when using this API should be reported to the creator, dani33y, in his discord.
 
-# Guía
+# How to use
 
 First we will install it by including it in our project. We can use maven or gradle.
 
