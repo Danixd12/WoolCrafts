@@ -1,4 +1,6 @@
 name: WoolCrafts
 version: '${project.version}'
 main: d.studio.woolcrafts.WoolCrafts
+author: DaniCraftingYT
 api-version: '1.17'
+

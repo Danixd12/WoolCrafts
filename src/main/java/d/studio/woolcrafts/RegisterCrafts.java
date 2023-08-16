@@ -33,12 +33,14 @@ public class RegisterCrafts {
         });
 
 
-        api.createRecipe(new ShapedRecipe(item),
+        api.createRecipe(item,
                  new Object[][]{new Object[]
                          {'I', item},
                          {'X', Material.ACACIA_LOG}
                  },
                 " IX");
+
+        //api.giveItem("DaniCraftingYT", item);
 
     }
 

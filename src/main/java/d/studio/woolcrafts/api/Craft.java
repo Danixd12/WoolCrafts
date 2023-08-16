@@ -4,6 +4,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.enchantments.Enchantment;
+import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.RecipeChoice;
 import org.bukkit.inventory.ShapedRecipe;
@@ -12,7 +13,6 @@ import org.jetbrains.annotations.NotNull;
 
 import javax.swing.table.AbstractTableModel;
 import java.util.List;
-import java.util.Objects;
 
 
 public class Craft {
@@ -71,12 +71,14 @@ public class Craft {
 
     /***
      * Crea la receta para un item.
-     * @param recipe
+     * @param item
      * @param ingredient
      * @param shape
      * @return
      */
-    public ShapedRecipe createRecipe(ShapedRecipe recipe, Object[][] ingredient, String... shape) {
+    public ShapedRecipe createRecipe(ItemStack item, Object[][] ingredient, String... shape) {
+
+        ShapedRecipe recipe = new ShapedRecipe(item);
 
         recipe.shape(shape);
 
@@ -117,6 +119,16 @@ public class Craft {
         Bukkit.addRecipe(recipe);
 
         return recipe;
+    }
+
+    /***
+     * Da un item a un jugador.
+     * @param player
+     * @param item
+     */
+    public void giveItem(Player player, @NotNull ItemStack item) {
+
+        player.getInventory().addItem(item);
 
     }
 
