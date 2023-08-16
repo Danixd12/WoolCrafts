@@ -34,5 +34,7 @@ api.createRecipe(item,
 Métodos, por ejemplo:
 
 `api.giveItem` Retorna el item que deseemos dar a X persona.
+
 `api.createRecipe` Retorna la receta creada.
+
 `api.createItem` Retorna el item que hayamos creado.
