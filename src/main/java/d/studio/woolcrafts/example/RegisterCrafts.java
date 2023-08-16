@@ -1,4 +1,4 @@
-package d.studio.woolcrafts;
+package d.studio.woolcrafts.example;
 
 import d.studio.woolcrafts.api.Craft;
 import org.bukkit.Bukkit;
