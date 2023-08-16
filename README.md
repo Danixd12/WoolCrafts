@@ -9,18 +9,18 @@ Any errors when using this API should be reported to the creator, dani33y, in hi
 First we will install it by including it in our project. We can use maven or gradle.
 
 ```xml
-	<repositories>
-		<repository>
-		    <id>jitpack.io</id>
-		    <url>https://jitpack.io</url>
-		</repository>
-	</repositories>
+<repositories>
+  <repository>
+	<id>jitpack.io</id>
+	<url>https://jitpack.io</url>
+  </repository>
+</repositories>
 
-	<dependency>
-	    <groupId>com.github.Danixd12</groupId>
-	    <artifactId>WoolCrafts</artifactId>
-	    <version>VERSION</version>
-	</dependency>
+<dependency>
+	<groupId>com.github.Danixd12</groupId>
+	<artifactId>WoolCrafts</artifactId>
+	<version>VERSION</version>
+</dependency>
 ```
 
 Then, to create a basic item, and its subsequent recipe we can use the following
