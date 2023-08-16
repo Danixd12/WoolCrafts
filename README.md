@@ -1,4 +1,4 @@
-# WoolCrafts - Create your own custom crafts the easy way!
+# WoolCrafts - Create your own custom recipes the easy way!
 
 *This api was created with the purpose of facilitating the creation of custom crafters for your server, by supporting the crafting of items using other previously customized items..* 
 
