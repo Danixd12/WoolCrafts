@@ -1,2 +1,5 @@
 # Project exclude paths
 /target/
+./pom.xml
+./WoolCrafts.iml
+./.idea
