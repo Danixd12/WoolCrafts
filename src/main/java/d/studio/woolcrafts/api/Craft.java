@@ -22,16 +22,15 @@ public class Craft {
 
     /***
      * Crea un item.
-     * @param name
-     * @param material
-     * @param amount
-     * @param lore
-     * @param enchant
-     * @return
+     * @param name Name of the item.
+     * @param material Material of the item.
+     * @param lore Description of the item.
+     * @param enchant Enchantments of the item.
+     * @return item
      */
-    public ItemStack createItem(String name, Material material, int amount, List<String> lore , @NotNull Object[][] enchant) {
+    public ItemStack createItem(String name, Material material, List<String> lore , @NotNull Object[][] enchant) {
 
-        ItemStack item = new ItemStack(material, amount);
+        ItemStack item = new ItemStack(material, 1);
         ItemMeta itemMeta = item.getItemMeta();
 
         itemMeta.setDisplayName(ChatColor.translateAlternateColorCodes('&', name));
@@ -76,10 +75,10 @@ public class Craft {
 
     /***
      * Crea la receta para un item.
-     * @param itemToCraft
-     * @param ingredient
-     * @param shape
-     * @return
+     * @param itemToCraft The result of the craft.
+     * @param ingredient Ingredients in order to craft the item.
+     * @param shape Shape of the craft.
+     * @return recipe
      */
     public ShapedRecipe createRecipe(ItemStack itemToCraft, Object[][] ingredient, String... shape) {
 
@@ -128,8 +127,8 @@ public class Craft {
 
     /***
      * Da un item a un jugador.
-     * @param player
-     * @param item
+     * @param player Bukkit player.
+     * @param item Items to give.
      */
     public void giveItem(Player player, @NotNull ItemStack... item) {
 
