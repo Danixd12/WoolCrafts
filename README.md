@@ -1,6 +1,7 @@
 # WoolCrafts - Crea tus crafteos personalizados de forma facil!
 
-*Esta api fue creada con el propósito de facilitar la creación de crafteos personalizados para tu servidor, al soportar el crafteo de items usando otros items previamente personalizados.* \n
+*Esta api fue creada con el propósito de facilitar la creación de crafteos personalizados para tu servidor, al soportar el crafteo de items usando otros items previamente personalizados.* 
+
 Cualquier error al usar esta API, debe ser reportado al creador, dani33y, en su discord.
 
 # Guía
