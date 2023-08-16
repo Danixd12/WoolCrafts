@@ -6,7 +6,7 @@ Any errors when using this API should be reported to the creator, dani33y, in hi
 
 # How to use
 
-First we will install it by including it in our project. We can use maven or gradle.
+First we will install it by including it in our project. We can use maven or gradle. (Bukkit 1.13+)
 
 ```xml
 <repositories>
