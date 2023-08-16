@@ -19,7 +19,7 @@ Primero lo instalaremos incluyendolo en nuestro proyecto. Podemos usar maven o g
 	<dependency>
 	    <groupId>com.github.Danixd12</groupId>
 	    <artifactId>WoolCrafts</artifactId>
-	    <version>Tag</version>
+	    <version>VERSION</version>
 	</dependency>
 ```
 
