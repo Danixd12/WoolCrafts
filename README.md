@@ -6,10 +6,26 @@ Cualquier error al usar esta API, debe ser reportado al creador, dani33y, en su 
 
 # Guía
 
-Primero lo instalaremos incluyendolo en nuestro proyecto.
+Primero lo instalaremos incluyendolo en nuestro proyecto. Podemos usar maven o gradle.
+
+```xml
+	<repositories>
+		<repository>
+		    <id>jitpack.io</id>
+		    <url>https://jitpack.io</url>
+		</repository>
+	</repositories>
+
+	<dependency>
+	    <groupId>com.github.Danixd12</groupId>
+	    <artifactId>WoolCrafts</artifactId>
+	    <version>Tag</version>
+	</dependency>
+```
+
+Luego, para crear un item basico, y su posterior receta podemos usar lo siguente
 
 ```java
-//Para crear un item basico, y su posterior receta podemos usar lo siguiente.
 
 Craft api = new Craft();
 
